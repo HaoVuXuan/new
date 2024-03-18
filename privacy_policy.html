@@ -1,0 +1,3185 @@
+<html
+  class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"
+  style=""
+>
+  <!--<!
+  [endif]--><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style data-merge-styles="true"></style>
+    <style data-merge-styles="true"></style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="data-spm" content="a1z1s" />
+    <title>H-Draw</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./res_files/icon.png" type="image/x-icon" rel="shortcut icon" />
+    <style type="text/css">
+      @media print {
+        .ms-editor-squiggler {
+          display: none !important;
+        }
+      }
+      .ms-editor-squiggler {
+        all: initial;
+
+        display: block !important;
+        height: 0px !important;
+      }
+      html,
+      body,
+      div,
+      span,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      abbr,
+      address,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      samp,
+      small,
+      strong,
+      sub,
+      sup,
+      var,
+      b,
+      i,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+      }
+      body {
+        line-height: 1;
+      }
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      nav ul {
+        list-style: none;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: none;
+      }
+      a {
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+      }
+      ins {
+        background-color: #ff9;
+        color: #000;
+        text-decoration: none;
+      }
+      mark {
+        background-color: #ff9;
+        color: #000;
+        font-style: italic;
+        font-weight: 700;
+      }
+      del {
+        text-decoration: line-through;
+      }
+      abbr[title],
+      dfn[title] {
+        border-bottom: 1px dotted;
+        cursor: help;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        margin: 1em 0;
+        padding: 0;
+      }
+      input,
+      select {
+        vertical-align: middle;
+      } /*!
+ * Style for default
+ */
+      html {
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        font: 100 12px/1.6 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+        width: 100%;
+        height: 100%;
+      }
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .fl {
+        float: left;
+      }
+      .fr {
+        float: right;
+      }
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: #999;
+      }
+      a:hover {
+        color: #666;
+      }
+      .clearfix:before,
+      .clearfix:after,
+      .item:before,
+      .item:after {
+        content: '.';
+        display: block;
+        visibility: hidden;
+        font-size: 0;
+        height: 0;
+        width: 0;
+        height: 0;
+      }
+      .clearfix:after,
+      .item:after {
+        clear: both;
+      }
+      .clearfix,
+      .item {
+        zoom: 1;
+      }
+      .btn,
+      .btn-eff {
+        height: 90px;
+        line-height: 90px;
+        display: block;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        text-align: left;
+        position: relative;
+        font-size: 25px;
+        width: 250px;
+      }
+      .btn {
+        background-image: url();
+        background-position: no-repeat;
+      }
+      .btn-eff {
+        background-image: url(http://gtms01.alicdn.com/tps/i1/T1p44VXwNfXXbiWMvP-510-170.png);
+        background-position: no-repeat;
+      }
+      .btn-android {
+        width: 272px;
+        background-position: -250px -80px;
+      }
+      .btn-android:hover {
+        background-position: -250px 0;
+      }
+      .btn-iphone {
+      }
+      .btn-iphone:hover {
+      }
+      .btn-eff-android {
+        background-position: 0 -90px;
+      }
+      .btn-eff-android:hover {
+        background-position: 250px -90px;
+      }
+      .btn-eff-iphone:hover {
+        background-position: 250px 0;
+      } /*!
+ * Style for header
+ */
+      .head {
+        width: 100%;
+        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.95);
+        _background-color: #fff;
+        margin: 0 auto;
+        position: fixed;
+        top: 0;
+        z-index: 5;
+        border-bottom: #d3d3d3 1px solid;
+      }
+      .head header {
+        width: 1160px;
+        margin: 0 auto;
+        padding: 10px;
+      }
+      .kendo-title {
+        float: left;
+      }
+      .logo {
+        display: block;
+        width: 200px;
+        height: 40px;
+        text-indent: -999em;
+        background: url(../ddm/logo.png) center center no-repeat;
+      }
+      .nav-wrap {
+        float: right;
+        padding-top: 5px;
+        display: block;
+      }
+      .nav {
+        font-size: 16px;
+      }
+      .nav li {
+        float: left;
+        margin: 0 20px;
+      }
+      .nav a:hover,
+      .nav .current a {
+        color: #8dd119;
+      } /*!
+ * Style for Main
+ */
+      .main {
+        width: 100%;
+        position: relative;
+        z-index: 3;
+      }
+      .kendo {
+        width: 1460px;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+      }
+      .kendo-sec,
+      .kendo-sec-inner,
+      .kendo-sec-bg {
+        width: 100%;
+        height: 700px;
+      }
+      .kendo-sec {
+        position: relative;
+        z-index: 2;
+      }
+      .perch {
+        height: 700px;
+      }
+      .kendo-sec-inner {
+        position: fixed;
+        top: 0;
+        _position: absolute;
+      }
+      .kendo-sec-bg {
+        position: absolute;
+        top: 0;
+      }
+      .kendo-bg-1,
+      .kendo-bg-2,
+      .kendo-bg-3,
+      .kendo-bg-4 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: none;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      .kendo-bg-1 {
+        background-image: url(./abc.png);
+        background-size: cover;
+      }
+      .kendo-bg-2 {
+        background-image: url(./4333.jpg);
+        background-size: cover;
+      }
+      .kendo-bg-3 {
+        background-image: url(./bg.jpg);
+        background-size: cover;
+      }
+      .kendo-bg-4 {
+        background-image: url(./4333.jpg);
+        background-size: cover;
+      }
+      .content {
+        background-color: #f2f2f2;
+        position: relative;
+        z-index: 4;
+      }
+      .kendo-sec-tit,
+      .kendo-songbook-tit,
+      .kendo-smart-tit,
+      .kendo-roam-tit {
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        position: absolute;
+      }
+      .kendo-sec-body {
+        position: relative;
+        z-index: 7;
+      }
+      .kendo-sec-tit {
+        width: 627px;
+        height: 196px;
+        background-size: cover;
+        left: 165px;
+        top: 195px;
+      }
+      .kendo-sec-tit span,
+      .kendo-songbook-tit span,
+      .kendo-smart-tit span,
+      .kendo-roam-tit span {
+        display: block;
+        text-indent: -9999px;
+      }
+      .kendo-sec-tit sup {
+        position: absolute;
+        right: -35px;
+        top: -10px;
+        font-size: 20px;
+        color: #fff;
+      }
+      .kendo-sec-phone {
+        width: 322px;
+        height: 556px;
+        background-image: url(./15.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 200px;
+        bottom: 0;
+        z-index: 6;
+      }
+      .album-tit {
+        position: absolute;
+        width: 170px;
+        height: 40px;
+        left: 50%;
+        margin-left: -85px;
+        top: 110px;
+      }
+      .album-tit .album-tit-item {
+        width: 100%;
+        height: 100%;
+        background-image: url(http://gtms01.alicdn.com/tps/i1/TB19Ks3FVXXXXckXXXX.QRcTXXX-170-120.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        display: none;
+      }
+      .album-tit .tit-item-1 {
+        background-position: 0 0;
+      }
+      .album-tit .tit-item-2 {
+        background-position: 0 -40px;
+      }
+      .album-tit .tit-item-3 {
+        background-position: 0 -80px;
+      }
+      .album-tit .tit-item-4 {
+        background-position: 0 -120px;
+      }
+      .album-lyric {
+        position: absolute;
+        width: 220px;
+        height: 40px;
+        left: 50%;
+        margin-left: -110px;
+        top: 390px;
+      }
+      .album-lyric .album-lyric-item {
+        width: 100%;
+        height: 100%;
+        background-image: url(http://gtms02.alicdn.com/tps/i2/TB1lAI5FVXXXXcIXpXX4cfV2pXX-220-120.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        display: none;
+      }
+      .album-lyric .lyric-item-1 {
+        background-position: 0 0;
+      }
+      .album-lyric .lyric-item-2 {
+        background-position: 0 -40px;
+      }
+      .album-lyric .lyric-item-3 {
+        background-position: 0 -80px;
+      }
+      .album-lyric .lyric-item-4 {
+        background-position: 0 -120px;
+      }
+      .ken-sec-cover {
+        width: 293px;
+        height: 215px;
+        background-size: cover;
+        border-radius: 0px;
+        position: absolute;
+        left: 50%;
+        margin-left: -144px;
+        top: 339px;
+      }
+      .ken-sec-cover img {
+        width: 293px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+      }
+      .kendo-sec-act {
+        position: absolute;
+        top: 500px;
+        left: 160px;
+      }
+      .kendo-sec-act .act-items {
+        overflow: hidden;
+        text-align: center;
+      }
+      .kendo-sec-act .act-items-1 {
+        width: 250px;
+        margin-right: 50px;
+      }
+      .kendo-sec-act .act-items a {
+        font-size: 14px;
+        color: #fff;
+      }
+      .kendo-sec-act .act-items .btn {
+        font-size: 25px;
+      }
+      .kendo-sec-act .act-items a:hover {
+        text-decoration: none;
+      }
+      .kendo-sec-act .act-items {
+        float: left;
+        text-align: left;
+      }
+      .kendo-sec-act .act-items p {
+        padding-top: 10px;
+        width: 250px;
+      }
+      .kendo-sec-arrow {
+        width: 86px;
+        height: 44px;
+        background-image: url(http://gtms01.alicdn.com/tps/i1/T1iXZ2FmlbXXccYhPq-86-44.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 50%;
+        margin-left: -43px;
+        bottom: 20px;
+        z-index: 8;
+        cursor: pointer;
+      }
+      .kendo-intro-songbook {
+        height: 1040px;
+        background: #fff url(./bgg.png) no-repeat center bottom;
+      }
+      .kendo-songbook-tit {
+        width: 528px;
+        height: 371px;
+        background-image: url(./info.png);
+        top: 80px;
+        left: 50%;
+        margin-left: -264px;
+      }
+      .kendo-songbook-iphone {
+        width: 320px;
+        height: 530px;
+        background: url(./b1.png) no-repeat center center;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -169px;
+        -moz-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        transform: translateY(100%);
+      }
+      .kendo-iphone {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(1);
+        -webkit-transition: all 400ms ease-out 0s;
+        -moz-transition: all 400ms ease-out 0s;
+        -o-transition: all 400ms ease-out 0s;
+        transition: all 400ms ease-out 0s;
+      }
+      .kendo-songbook-screen {
+        transform: scale(1);
+        width: 298px;
+        height: 500px;
+        background: url(./x1.png) no-repeat center center;
+        position: absolute;
+        left: 50%;
+        margin-left: -148px;
+        top: 57px;
+      }
+      .kendo-intro-smart {
+        height: 930px;
+        background-color: #f4f4f4;
+      }
+      .kendo-smart-tit {
+        width: 431px;
+        height: 155px;
+        background-image: url(./top.png);
+        top: 80px;
+        left: 50%;
+        margin-left: -228px;
+      }
+      .kendo-smart-centre {
+        width: 246px;
+        height: 283px;
+        background: url(./109.png) no-repeat center;
+        position: absolute;
+        left: 50%;
+        margin-left: -96px;
+        top: 380px;
+      }
+      .kendo-smart-divulge {
+        width: 830px;
+        height: 600px;
+        background: #f4f4f4 url(./110.png) no-repeat center center;
+        position: absolute;
+        left: 50%;
+        margin-left: -416px;
+        top: 250px;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+      }
+      .kendo-smart-div {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: all 400ms ease-out 0s;
+        -moz-transition: all 400ms ease-out 0s;
+        -o-transition: all 400ms ease-out 0s;
+        transition: all 400ms ease-out 0s;
+      }
+      .kendo-intro-roam {
+        height: 930px;
+        background-color: #fff;
+      }
+      .kendo-roam-ie {
+        background: #fff
+          url(http://gtms01.alicdn.com/tps/i1/T16OP3FdFbXXX2a5Ig-1280-680.jpg)
+          no-repeat center bottom;
+      }
+      .kendo-roam-tit {
+        width: 484px;
+        height: 217px;
+        top: 80px;
+        left: 50%;
+        margin-left: -286px;
+        background: url('letsstart.png');
+      }
+      .love-music {
+        display: none;
+        width: 305px;
+        height: 36px;
+        text-indent: -9999em;
+        margin: 0 auto;
+        margin-bottom: 40px;
+      }
+      .mod-foot {
+      }
+      .kendo-foot-act {
+        width: 586px;
+        line-height: 65px;
+        margin: 0 auto;
+      }
+      .kendo-foot-act .act-items {
+        float: left;
+      }
+      .kendo-foot-act .btn-eff-iphone {
+        margin-right: 20px;
+      }
+      .foot-con {
+        width: 342px;
+        margin: 0 auto;
+      }
+      .foot-con .tit {
+        height: 40px;
+        width: 320px;
+        background: url(http://img.xiami.net/static/img/software/spark/f_tit.jpg)
+          no-repeat;
+        text-indent: -9999px;
+      }
+      .foot-con .dld {
+        padding: 40px 0 30px;
+      }
+      .foot-con .download {
+        margin: 0 auto;
+      }
+      .other-way {
+        padding: 0 40px 30px;
+        border-bottom: #c1c5c8 1px dashed;
+      }
+      .foot-con .other-way .fr {
+        padding-top: 15px;
+      }
+      .phone-foot {
+        text-align: center;
+        color: #999;
+        border-top: #eee 1px solid;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        visibility: hidden;
+        margin-top: 30px;
+      }
+      .other-way .fl {
+        min-width: 120px;
+      }
+      .other-way ul {
+        line-height: 28px;
+        font-size: 14px;
+        padding-top: 20px;
+        color: #565e66;
+      }
+      .other-way ul li {
+        list-style-type: square;
+        list-style-position: inside;
+      }
+      .other-way ul a {
+        text-decoration: none;
+      }
+      .other-way ul a:hover {
+        color: #222;
+      }
+      .foot-copy {
+        text-align: center;
+        line-height: 22px;
+        padding-top: 20px;
+        font-size: 12px;
+      }
+      .foot-copy a {
+        text-decoration: none;
+      }
+      .foot-copy a:hover {
+        color: #222;
+      }
+      .foot-copy .y {
+        color: #919191;
+      }
+      .foot-copy .y a {
+        color: #919191;
+        text-decoration: none;
+      }
+      .foot-copy .y a:hover {
+        text-decoration: none;
+      }
+      .foot-copy .w {
+        color: #565e66;
+      }
+      .kendo-perspective {
+        position: relative;
+        margin: 0 auto;
+        width: 536.69184px;
+        height: 1136px;
+        -webkit-perspective: 1200px;
+        -moz-perspective: 1200px;
+        perspective: 1200px;
+        -webkit-perspective-origin: 50% 0;
+        -moz-perspective-origin: 50% 0;
+        perspective-origin: 50% 0;
+        *visibility: hidden;
+        visibility: hidden\9;
+      }
+      .kendo-wiff-icon {
+        margin-top: 200px;
+        position: absolute;
+        top: 260px;
+        z-index: 9999;
+        left: 50%;
+        margin-left: -360px;
+        opacity: 0;
+        -webkit-transform: scale(0.3) rotate(80deg);
+        -moz-transform: scale(0.3) rotate(80deg);
+        -ms-transform: scale(0.3) rotate(80deg);
+        -o-transform: scale(0.3) rotate(80deg);
+        transform: scale(0.3) rotate(80deg);
+        visibility: hidden\9;
+        *visibility: hidden;
+        _visibility: hidden;
+      }
+      .kendo-view-layers .kendo-wiff-icon {
+        opacity: 1;
+        -webkit-transform: scale(1) rotate(0);
+        -moz-transform: scale(1) rotate(0);
+        -ms-transform: scale(1) rotate(0);
+        -o-transform: scale(1) rotate(0);
+        transform: scale(1) rotate(0);
+        -webkit-transition: all 400ms ease-out 1200ms;
+        -moz-transition: all 400ms ease-out 1200ms;
+        -o-transition: all 400ms ease-out 1200ms;
+        transition: all 400ms ease-out 1200ms;
+      }
+      .kendo-device {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -240px;
+        -webkit-transition: -webkit-transform 0.7s ease-in-out;
+        -moz-transition: -moz-transform 0.7s ease-in-out;
+        transition: transform 0.7s ease-in-out;
+        -webkit-transform: rotateY(-30deg) rotateX(90deg) translateZ(-15px)
+          translateZ(-254px);
+        -moz-transform: rotateY(-30deg) rotateX(90deg) translateZ(-15px)
+          translateZ(-254px);
+        transform: rotateY(-30deg) rotateX(90deg) translateZ(-15px)
+          translateZ(-254px);
+      }
+      .kendo-device,
+      .kendo-object,
+      .kendo-object > div,
+      .kendo-screens a {
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+      }
+      .kendo-object {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: -webkit-transform 0.4s;
+        -moz-transition: -moz-transform 0.4s;
+        transition: transform 0.4s;
+      }
+      .kendo-object > div {
+        position: absolute;
+        display: block;
+        background: #181818;
+      }
+      .kendo-front,
+      .kendo-back {
+        width: 536.69184px;
+        height: 1136px;
+        border-radius: 34px;
+      }
+      .kendo-top,
+      .kendo-bottom {
+        width: 30px;
+        height: 476.69184px;
+        -webkit-transform-origin: 50% 0;
+        -moz-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+      }
+      .kendo-left,
+      .kendo-right {
+        width: 30px;
+        height: 1076px;
+      }
+      .kendo-back {
+        -webkit-transform: rotateX(180deg) translateZ(15px);
+        -moz-transform: rotateX(180deg) translateZ(15px);
+        transform: rotateX(180deg) translateZ(15px);
+      }
+      .kendo-right {
+        -webkit-transform: translateY(30px) rotateY(90deg)
+          translateZ(521.69184px);
+        -moz-transform: translateY(30px) rotateY(90deg) translateZ(521.69184px);
+        transform: translateY(30px) rotateY(90deg) translateZ(521.69184px);
+      }
+      .kendo-left {
+        -webkit-transform: translateY(30px) rotateY(-90deg) translateZ(15px);
+        -moz-transform: translateY(30px) rotateY(-90deg) translateZ(15px);
+        transform: translateY(30px) rotateY(-90deg) translateZ(15px);
+      }
+      .kendo-top {
+        -webkit-transform: rotateZ(-90deg) translateY(15px) rotateY(90deg);
+        -moz-transform: rotateZ(-90deg) translateY(15px) rotateY(90deg);
+        transform: rotateZ(-90deg) translateY(15px) rotateY(90deg);
+      }
+      .kendo-bottom {
+        -webkit-transform: rotateZ(-90deg) translateY(15px) rotateY(-90deg)
+          translateZ(1136px);
+        -moz-transform: rotateZ(-90deg) translateY(15px) rotateY(-90deg)
+          translateZ(1136px);
+        transform: rotateZ(-90deg) translateY(15px) rotateY(-90deg)
+          translateZ(1136px);
+      }
+      .kendo-side:before,
+      .kendo-side:after {
+        position: absolute;
+        top: -25px;
+        left: 0;
+        width: 30px;
+        height: 23px;
+        background: #181818;
+        background: -webkitlinear-gradient(bottom, #181818 0, #333 100%);
+        background: -moz-linear-gradient(bottom, #181818 0, #333 100%);
+        background: linear-gradient(to top, #181818 0, #333 100%);
+        content: '';
+        -webkit-transform: rotateX(22.5deg) translateZ(-7px);
+        -moz-transform: rotateX(22.5deg) translateZ(-7px);
+        transform: rotateX(22.5deg) translateZ(-7px);
+      }
+      .kendo-side:after {
+        top: 100%;
+        background: -webkit-linear-gradient(top, #181818 0, #333 100%);
+        background: -moz-linear-gradient(top, #181818 0, #333 100%);
+        background: linear-gradient(to bottom, #181818 0, #333 100%);
+        -webkit-transform: rotateX(-22.5deg) translateZ(-7px);
+        -moz-transform: rotateX(-22.5deg) translateZ(-7px);
+        transform: rotateX(-22.5deg) translateZ(-7px);
+      }
+      .kendo-screens a {
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+      .kendo-screens > a {
+        position: absolute;
+        width: 456.18806px;
+        height: 809.5136px;
+        top: 163.2432px;
+        left: 40.25189px;
+        outline: 0;
+        display: block;
+        cursor: pointer;
+        opacity: 1;
+        -webkit-transition: -webkit-transform 0.7s, opacity 0.4s;
+        transition: -moz-transform 0.7s, opacity 0.4s;
+        transition: transform 0.7s, opacity 0.4s;
+        -webkit-transform: translateZ(16px);
+        -moz-transform: translateZ(16px);
+        transform: translateZ(16px);
+      }
+      .kendo-screens > a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        -webkit-transition: opacity 0.3s;
+        -moz-transition: opacity 0.3s;
+        transition: opacity 0.3s;
+      }
+      .kendo-label {
+        border: 3px solid #fff;
+        color: #fff;
+        position: absolute;
+        left: 100%;
+        margin-left: 18px;
+        width: 200px;
+        padding: 10px;
+        opacity: 0;
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+        -webkit-transition: opacity 0.7s, -webkit-transform 0.7s;
+        -moz-transition: opacity 0.7s, -moz-transform 0.7s;
+        transition: opacity 0.7s, transform 0.7s;
+      }
+      .kendo-screens > a:hover .kendo-label {
+        border-color: #687fa7;
+        color: #687fa7;
+      }
+      .kendo-label::after {
+        right: 100%;
+        border: solid transparent;
+        content: '';
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: transparent;
+        border-right-color: #d9382e;
+        border-width: 16px;
+        top: 50%;
+        margin-top: -16px;
+      }
+      .kendo-label::after,
+      .kendo-label::before {
+        right: 100%;
+        border: solid transparent;
+        content: ' ';
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+      .kendo-label::after {
+        border-color: transparent;
+        border-right-color: #d2d1d5;
+        border-width: 12px;
+        top: 50%;
+        margin-top: -12px;
+      }
+      .kendo-label::before {
+        border-color: transparent;
+        border-right-color: #fff;
+        border-width: 16px;
+        top: 50%;
+        margin-top: -16px;
+      }
+      .kendo-screens > a:hover .kendo-label::before {
+        border-right-color: #687fa7;
+      }
+      .kendo-wrapper button {
+        background: transparent;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 1px;
+        padding: 10px 30px;
+        border: 3px solid #fff;
+        color: #fff;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        text-transform: uppercase;
+      }
+      .kendo-wrapper button:hover {
+        border-color: #687fa7;
+        color: #687fa7;
+      }
+      .kendo-view-layers .kendo-screens .kendo-screen-1 {
+        -webkit-transform: translateZ(75px);
+        -moz-transform: translateZ(75px);
+        transform: translateZ(75px);
+        -webkit-transition-delay: 0.7s;
+        -moz-transition-delay: 0.7s;
+        transition-delay: 0.7s;
+        opacity: 0.9;
+      }
+      .kendo-view-layers .kendo-screens .kendo-screen-2 {
+        -webkit-transform: translateZ(135px);
+        -moz-transform: translateZ(135px);
+        transform: translateZ(135px);
+        -webkit-transition-delay: 0.6s;
+        -moz-transition-delay: 0.6s;
+        transition-delay: 0.6s;
+        opacity: 0.9;
+      }
+      .kendo-view-layers .kendo-screens .kendo-screen-3 {
+        -webkit-transform: translateZ(195px);
+        -moz-transform: translateZ(195px);
+        transform: translateZ(195px);
+        -webkit-transition-delay: 0.5s;
+        -moz-transition-delay: 0.5s;
+        transition-delay: 0.5s;
+        opacity: 0.9;
+      }
+      .kendo-view-layers .kendo-screens .kendo-screen-4 {
+        -webkit-transform: translateZ(255px);
+        -moz-transform: translateZ(255px);
+        transform: translateZ(255px);
+        -webkit-transition-delay: 0.4s;
+        -moz-transition-delay: 0.4s;
+        transition-delay: 0.4s;
+        opacity: 0.9;
+      }
+      .kendo-view-layers .kendo-screens .kendo-screen-5 {
+        -webkit-transform: translateZ(315px);
+        -moz-transform: translateZ(315px);
+        transform: translateZ(315px);
+        -webkit-transition-delay: 0.3s;
+        -moz-transition-delay: 0.3s;
+        transition-delay: 0.3s;
+        opacity: 0.9;
+      }
+      .kendo-view-layers .kendo-screens > a:hover::after {
+        opacity: 1;
+      }
+      .kendo-view-layers .kendo-label {
+        opacity: 1;
+        -webkit-transform: rotateX(-90deg);
+        -moz-transform: rotateX(-90deg);
+        transform: rotateX(-90deg);
+      }
+      .kendo-view-layers .kendo-screen-1 .kendo-label {
+        -webkit-transition-delay: 1.1s;
+        -moz-transition-delay: 1.1s;
+        transition-delay: 1.1s;
+      }
+      .kendo-view-layers .kendo-screen-2 .kendo-label {
+        -webkit-transition-delay: 1s;
+        -moz-transition-delay: 1s;
+        transition-delay: 1s;
+      }
+      .kendo-view-layers .kendo-screen-3 .kendo-label {
+        -webkit-transition-delay: 0.9s;
+        -moz-transition-delay: 0.9s;
+        transition-delay: 0.9s;
+      }
+      .kendo-view-layers .kendo-screen-4 .kendo-label {
+        -webkit-transition-delay: 0.8s;
+        -moz-transition-delay: 0.8s;
+        transition-delay: 0.8s;
+      }
+      .kendo-view-layers .kendo-screen-5 .kendo-label {
+        -webkit-transition-delay: 0.7s;
+        -moz-transition-delay: 0.7s;
+        transition-delay: 0.7s;
+      }
+      .kendo-effect.kendo-view-layers .kendo-device {
+        margin-top: 200px;
+        -webkit-transform: rotateY(-30deg) rotateX(90deg) translateZ(-15px)
+          translateZ(-254px);
+        -moz-transform: rotateY(-30deg) rotateX(90deg) translateZ(-15px)
+          translateZ(-254px);
+        transform: rotateY(-30deg) rotateX(90deg) translateZ(-15px)
+          translateZ(-254px);
+      }
+      .kendo-effect .kendo-screens a {
+        cursor: default;
+      }
+      .kendo-effect .kendo-screens .kendo-screen-1 {
+        background: url(./p3.png) no-repeat center center;
+        background-size: cover;
+      }
+      .kendo-effect .kendo-screens .kendo-screen-2 {
+        background: url(./p2.png) no-repeat center center;
+        background-size: cover;
+      }
+      .kendo-effect .kendo-screens .kendo-screen-3 {
+        background: url(./p1.png) no-repeat center center;
+        background-size: cover;
+      } /*!
+ * Style for footer
+ */
+      .foot {
+      }
+      #footer .wrapper .content {
+        background-color: #fff;
+      } /*!
+ * Stype for share
+*/
+      .mod-share {
+        position: fixed;
+        _position: absolute;
+        width: 60px;
+        height: 300px;
+        top: 50%;
+        margin-top: -150px;
+        left: 0;
+        z-index: 9999999999;
+        font-family: 'Microsoft YaHei', 'Microsoft JhengHei', STHeiti, Georgia;
+      }
+      .share-on {
+        font-size: 16px;
+        text-align: center;
+        color: #b9b9ba;
+        position: absolute;
+        top: 50%;
+        left: 0;
+      }
+      .share-on-default {
+        margin-top: -70px;
+        width: 40px;
+        height: 138px;
+        line-height: 20px;
+        border: #000 1px solid;
+        box-shadow: inset 0 1px 0 #65656a, inset 1px 0 0 #4f5051;
+        border-left: 0;
+        border-bottom-right-radius: 2px;
+        border-top-right-radius: 2px;
+        background: #414047;
+        background-image: -moz-linear-gradient(top, #414047, #2a272b);
+        background-image: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          color-stop(0, #414047),
+          color-stop(1, #2a272b)
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#414047', EndColorStr='#2a272b');
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#414047', EndColorStr='#2a272b')";
+      }
+      .share-on-default b {
+        font-size: 16px;
+        width: 28px;
+        height: 96px;
+        margin-top: 21px;
+        padding: 0 6px;
+        display: block;
+        font-weight: 400;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.8),
+          -1px -1px 1px rgba(255, 255, 255, 0.1);
+      }
+      .share-on-xmas {
+        background-image: url(http://gtms01.alicdn.com/tps/i1/T1R18mFtBcXXa1nMsA-70-285.png);
+        background-repeat: no-repeat;
+        width: 70px;
+        height: 285px;
+        border: 0;
+        margin-top: -142px;
+        text-indent: -99999px;
+      }
+      .share-on:hover {
+        color: #b9b9ba;
+        text-decoration: none;
+      }
+      .share-con {
+        position: relative;
+        width: 40px;
+        height: 300px;
+        display: none;
+        left: -66px;
+      }
+      .share-list,
+      .share-shadow {
+        position: absolute;
+        height: 300px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+      .share-list {
+        width: 60px;
+        background-color: #f4f4f4;
+        overflow: hidden;
+      }
+      .share-list ul {
+        height: 280px;
+        overflow: hidden;
+        padding: 16px 10px 0;
+      }
+      .share-list li {
+        width: 40px;
+        padding: 0 4px 18px;
+      }
+      .share-list li a {
+        color: #5a5a5a;
+        font-size: 16px;
+        line-height: 22px;
+        text-decoration: none;
+      }
+      .share-list li a:hover {
+        color: #5a5a5a;
+        text-decoration: none;
+      }
+      .share-list li b {
+        width: 32px;
+        height: 32px;
+        display: block;
+        background-image: url(http://res.xiami.net/static/img/software/spark/sharebtn.png);
+        background-repeat: no-repeat;
+      }
+      .share-list .qq b {
+        background-position: 0 -40px;
+      }
+      .share-list .douban b {
+        background-position: 0 -80px;
+      }
+      .share-list .renren b {
+        background-position: 0 -120px;
+      }
+      .share-shadow {
+        width: 64px;
+        background-color: #999;
+        background-color: rgba(0, 0, 0, 0.4);
+        left: 0;
+        bottom: -4px;
+      }
+      .jqm-con {
+        width: 340px;
+        height: 250px;
+        background: #fff;
+        position: fixed;
+        _position: absolute;
+        left: 50%;
+        top: 250px;
+        z-index: 99999;
+        margin: 0 0 0 -150px;
+        border-radius: 1px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+        display: none;
+        z-index: 9999;
+      }
+      .jqm-con .arrow,
+      .jqm-con .arrow-mask {
+        position: absolute;
+        font: 400 0/9999px serif;
+        text-indent: -9999px;
+        overflow: hidden;
+        width: 0;
+        height: 0;
+        z-index: 1;
+        border-width: 0 9px 9px;
+        border-style: dashed dashed solid;
+        border-color: transparent transparent #ebebeb;
+        border-bottom-color: #f7f7f9;
+        top: -9px;
+        left: 20px;
+      }
+      .jqm-con .arrow {
+        border-width: 0 9px 9px !important;
+        border-bottom-color: #9d9e9f;
+      }
+      .jqm-con .con {
+        width: 340px;
+        height: 250px;
+        background-color: #f7f7f9;
+      }
+      .jqm-con h3 {
+        text-align: center;
+        padding: 20px 0;
+        color: #565e66;
+        font-size: 16px;
+      }
+      .jqm-con .other-way {
+        padding-top: 20px;
+        border-bottom: 0;
+      }
+      .jqm-con .cls {
+        width: 18px;
+        height: 18px;
+        display: block;
+        position: absolute;
+        background: url(http://img.xiami.net/static/img/software/spark/close.png)
+          no-repeat;
+        right: 20px;
+        top: 20px;
+      }
+      .jqm-con a.cls:hover {
+        background-position: 0 -18px;
+      }
+      .nav-collapse.collapse {
+        height: auto;
+        overflow: visible;
+      }
+      .btn-navbar {
+        display: none;
+        visibility: hidden;
+      }
+      .collapse {
+        position: relative;
+        height: 0;
+        overflow: hidden;
+      }
+      .collapse.in {
+        height: auto;
+      } /*!
+ *  Style for media screen
+ */
+
+      @media screen and (max-width: 1460px) {
+        .kendo {
+          width: 100%;
+        }
+        #cool {
+          width: 500px;
+        }
+      }
+      @media screen and (max-width: 1227px) {
+        .kendo-sec-phone {
+          width: 270px;
+          height: 466px;
+        }
+        .ken-sec-cover img {
+          width: 247px;
+          top: -55px;
+          left: 22px;
+        }
+        #cool {
+          width: 400px;
+        }
+        .kendo-sec-tit {
+          top: 295px;
+        }
+      }
+
+      @media screen and (max-width: 1050px) {
+        .kendo-sec-act .act-items-1 {
+          width: 200px;
+          margin-right: 30px;
+        }
+
+        .kendo-sec-act {
+          left: 120px;
+        }
+        .kendo-sec-phone {
+          width: 270px;
+          height: 466px;
+          right: 130px;
+        }
+        .ken-sec-cover img {
+          width: 247px;
+          top: -55px;
+          left: 22px;
+        }
+        #cool {
+          width: 350px;
+        }
+        .kendo-sec-tit {
+          top: 295px;
+        }
+        #aph {
+          width: 200px;
+        }
+
+        #iosh {
+          width: 200px;
+        }
+        .kendo-sec-tit {
+          left: 140px;
+        }
+        .kendo-sec-act .act-items-1 {
+          margin-left: 16px;
+        }
+      }
+
+      * Style for animation */ .pulse {
+        animation-name: pulse;
+        -webkit-animation-name: pulse;
+        animation-duration: 1.5s;
+        -webkit-animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(0.9);
+          opacity: 0.7;
+        }
+        50% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(0.9);
+          opacity: 0.7;
+        }
+      }
+      @-webkit-keyframes pulse {
+        0% {
+          -webkit-transform: scale(0.9);
+          opacity: 0.7;
+        }
+        50% {
+          -webkit-transform: scale(1);
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: scale(0.9);
+          opacity: 0.7;
+        }
+      }
+      #gotop {
+        position: fixed;
+        text-indent: -9999px;
+        _position: absolute;
+        z-index: 9999999999;
+        width: 50px;
+        height: 50px;
+        bottom: 5px;
+        right: 20px;
+        background: url(http://img.xiami.net/res/v3/img/gotop.png) no-repeat;
+      }
+      #gotop:hover {
+        background: url(http://img.xiami.net/res/v3/img/gotop.png) no-repeat 0 -50px;
+      }
+      .t_hide {
+        display: none;
+      }
+      .t_show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body data-spm="3522013">
+    <style>
+      .l-o-line,
+      .on {
+        opacity: 0.2;
+      }
+      .language-option a,
+      .language-option span {
+        padding: 0 10px;
+        display: inline-block;
+        font-size: 12px;
+        -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        -o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+      .nav_wrap {
+        background: rgba(255, 255, 255, 0.95);
+        filter: false;
+        position: absolute;
+        width: 100%;
+        z-index: 100;
+        border-bottom: #d3d3d3 1px solid;
+        display: block;
+
+        height: 60px;
+      }
+
+      .nav_panel,
+      .nav_wrap {
+        height: 60px;
+      }
+      .nav_panel {
+        line-height: 60px;
+        width: 1024px;
+        margin: 0 auto;
+        max-width: 100%;
+        min-width: 760px;
+      }
+      .logos {
+        background: url(./ddm/en.png) 50% 50% no-repeat;
+        width: 180px;
+
+        overflow: hidden;
+        margin-right: 45px;
+      }
+
+      .nav_panel a {
+        color: #5c5c5c;
+        font-size: 14px;
+        -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        -o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+      .z {
+        float: left;
+      }
+      .nav {
+        margin-right: -30px;
+      }
+
+      .y {
+        float: right;
+      }
+
+      .nav a:hover {
+        color: #82ca10;
+      }
+
+      .nav a {
+        margin: 0 30px 0 0;
+        padding: 0 15px;
+        _display: inline;
+
+        -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        -o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+
+      .on {
+        color: #2c2c2c;
+      }
+    </style>
+    <div
+      style="
+        max-width: 720px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: auto;
+        margin-bottom: 30px;
+      "
+    >
+      <h1 class="t1">Privacy &amp; Terms</h1>
+      <h2 class="t2">Privacy Policy – H-Draw</h2>
+      <p class="t3">Last Update: August 2024</p>
+
+      <h2 class="t2">Privacy Policy</h2>
+      <p class="t3">
+        Your privacy is important to TH-Draw Team (the “team”, “we” or “us”)
+        and we are committed to protecting your privacy. H-Draw provides this
+        Privacy Policy to help you understand how we collect, use and disclose
+        information, including what you may provide to us or that we obtain from
+        our products and services. This Privacy Policy explains how we treat
+        your information and protects your privacy when you use our mobile
+        applications and related services (“the Software and Services”) and the
+        rights and options available to you regarding your information. We
+        believe that you have a right to know our practices regarding the
+        information we may collect and use when you use the Software and
+        Services. The Software and Services may include various features and
+        content that are offered and delivered to you by us and/or by third
+        parties, such as images, messages, advertisements, gifs and videos, as
+        well as features and content that you may choose to add ("Content"). IF
+        YOU DO NOT AGREE TO THE TERMS AND CONDITIONS SET FORTH HEREIN, DO NOT
+        USE THE SOFTWARE AND SERVICES.
+      </p>
+
+      <p class="t2">Amendments to this Policy</p>
+      <p class="t3">
+        We may periodically make changes to this Policy as we update or expand
+        our Services. We will notify you of any material changes to this Privacy
+        Policy by notifying you via the email we have on file for you, or by
+        means of a notice on our Services in advance of the effective date of
+        the changes. If you do not agree to the changes, you should discontinue
+        your use of the Services prior to the time the modified Policy takes
+        effect. If you continue using the Services after the modified Policy
+        takes effect, you will be bound by the modified Policy. Furthermore, we
+        may provide you with “just-in-time” disclosures or additional
+        information about the data collection, use and sharing practices of
+        specific Services. These notices may provide more information about our
+        privacy practices, or provide you with additional choices about how we
+        process your personal information.
+      </p>
+      <p class="t2">Information Collection</p>
+      <p class="t3">
+        In this Policy, the term “personal information” includes any information
+        that identifies or makes an individual identifiable. When you access or
+        use our Services, we may generally collect the personal information
+        described below.
+      </p>
+      <p class="t3">
+        For better user experiences, we may collect the following information.
+      </p>
+      <p class="t3">
+        <strong>I. Photos</strong>
+        <br />
+        <br />
+        In order to use some of the features of the Software and Services
+        (including but not limited to customizing photo widgets), we want to
+        obtain the storage permission for the album (WRITE_EXTERNAL_STORAGE,
+        READ_EXTERNAL_STORAGE), which is used to complete the photo widget
+        customization or self-design function. You may voluntarily grant us the
+        permission to access to the photo album to obtain photo stored in your
+        mobile device. When you use photos to customize your photo widgets, we
+        may collect your photos but will not save them. Therefore, if you don’t
+        want us to use these images, please do not use this feature of the
+        Software and Services.
+
+        <br />
+        <br />
+        <strong>II. The functional requirements（location）</strong>
+        <br />
+        <br />
+        We want to request location permission (ACCESS_COARSE_LOCATION and
+        ACCESS_FINE_LOCATION and ACCESS_BACKGROUND_LOCATION)： add a new weather
+        widget for you to use, in order to obtain accurate weather information,
+        you need to ask your location information and access background location
+        information to request location information in the background at run
+        time to provide you with accurate weather forecasts；
+        <br />
+        <br />
+        <strong>III. Application Acquisition</strong>
+        <br />
+        <br />
+        We get permissions for apps installed on your device
+        (QUERY_ALL_PACKAGES), use QUERY_ALL_PACKAGES to discover any and all
+        apps installed on your device. Perform device search and icon
+        pairing;<br />
+        One of the core functions of the product is to provide users with
+        different styles of icon icons. After matching the corresponding icon
+        through the application package name (device application), click install
+        to allow the user to create a shortcut to the corresponding device
+        application on the desktop;<br />
+        If there is no direct match, the user can use the search function to
+        find the installed applications on the device, select the device
+        application that you want to replace the icon to match, and then click
+        install to create a shortcut to the desktop;<br />
+        <br />
+        <strong>IV. Support Related Information</strong>
+        <br />
+        <br />
+        If you communicate with us via our support section or via email, we may
+        also collect your email address, name and any information voluntarily
+        submitted by you in connection with such support (for example, your
+        name, company name, and particular support query or request). Such
+        information will only be used to provide you with support services and
+        will not be connected with any other information collected from you on
+        or through the Software and Services, including, any individual User ID
+        (as defined below) generated or collected by us. When you use the
+        Software and Services, we automatically generate an anonymous internal
+        user ID (which does not personally identify you), which is assigned to
+        your use of the Software and Services (the "User ID") and may be
+        combined with any of the above information.
+        <br />
+        <br />
+        <strong>V. Technical Information</strong>
+        <br />
+        <br />
+        Certain technical information regarding your device, including the type,
+        name and version of operating system and Other Software including,
+        without limitation: (i) their interactions with the Software and
+        Services, your configuration and settings of the Software and
+        V.Services, version of the Software and Services; (ii)ISP (Internet
+        Service Provider) , Internet protocol (IP) address, Media Access Control
+        (MAC) address, anonymous user identifiers, device configuration and
+        identifiers; (iii)Advertising ID (Identifier for Advertisers used in
+        Android, such as Google advertising ID (GAID)); (iv) location;
+        (v)Android ID (which are used locally, never saved on servers).
+        <br />
+        <br />
+        <strong>VI. Payment data</strong>
+        <br />
+        <br />
+        We may collect information about your subscription orders, such as
+        purchase items, subscription time, order status, payment time. We do not
+        collect and we are not responsible for the collection or security of
+        payment details. Payment information is processed and stored using
+        third-party companies (such as Google).These companies can be contacted
+        through their websites:
+        <a href="https://play.google.com/">https://play.google.com</a>. Before
+        entering your personal payment details, we suggest that you read and
+        become familiar with the privacy policy.
+        <br />
+        <br />
+
+        <strong>VII. Contact Information</strong>
+        <br />
+        <br />
+        When you sign up to create an account with some of our Apps, you will be
+        required to provide an email address, or other contact information as
+        part of the registration process. Alternatively, you can use your
+        Facebook Account or other third party social network accounts (together,
+        “Social Media Account”) to register for the Services.
+        <br />
+        <br />
+
+        <strong>VIII. Social Media Account Information</strong>
+        <br />
+        <br />
+        When you sign up with a Social Media Account, you will be asked to
+        choose which information you would like to share with us, such as your
+        email address, birthday, friends list, or public profile information.
+        When you decide to use a Social Media Account to sign up for our
+        Services, we only require the collection of the email address associated
+        with your Social Media Account; all other information provided by you is
+        voluntary.
+        <br />
+        <br />
+
+        <strong>IX. Your Content</strong>
+        <br />
+        <br />
+        When using some of our Services, you can create, save, upload content by
+        providing us with access to your photos, media and files, and your
+        device’s camera. You voluntarily provide this information to us. We may
+        store any information about your interactions on our Services or any
+        content created, posted or shared by you on our Services (e.g., pictures
+        and other content) indefinitely after the closure your account for the
+        establishment or defense of legal claims, audit and crime prevention
+        purposes.
+        <br />
+        <br />
+
+        <strong>X. Collection of personal information</strong>
+        <br />
+        <br />
+        1.When you use H-Draw, the system will automatically record
+        information including but not limited to your usage, usage time,
+        browsing history, etc.;<br />
+        2.We will collect your device information: in order to identify users
+        and provide users with better services, conduct user behavior analysis,
+        crash analysis, product performance analysis, advertising monitoring,
+        and conduct internal audits and data analysis; In some cases, the app
+        will collect some of your device information during startup and
+        running:<br />
+        Device attributes: mobile phone model, mobile phone version, network
+        type, screen size, current application version, and other
+        information;<br />
+        Device serial number or other device identifiers: such as IMEI, network
+        device hardware address, advertising identifier IDFA and other device
+        serial numbers, unique identifiers, etc.;<br />
+        <br />
+        <br />
+
+        <strong>XI. Other Collection</strong>
+        <br />
+        <br />
+        Authorize the function of creating shortcuts or setting widgets to the
+        desktop. We will not apply for the above permissions if you do not use
+        related functions. You can decide whether to allow the Theme pack to
+        have the above permissions. If you deny us the sensitive permissions
+        required to obtain functions, we may not be able to continue to provide
+        you with corresponding services, and we will no longer collect your
+        relevant information.<br />
+        ”Session and Available Data" refers to information relevant to
+        connections and services that you provide to us when you use an
+        application, service, or website, including but not limited to when you
+        use our applications, services, or websites. Session and Available Data
+        includes information related to connection requests, server
+        communication, and data sharing, including network testing, quality of
+        service, date, time, and place/location. Gathering of information as
+        described below, we may also gather Session and Available Data. Please
+        note that Session and Available Data does not include any personal
+        information, nor does it include any content that you might use
+        applications (such as photos, storage, camera, etc.), services, or
+        websites to send or share.<br />
+        <br />
+        <br />
+
+        <strong>XII. Third Parties</strong>
+        <br />
+        <br />
+        We may make third party applications, such as extensions, available
+        through the Services. The information collected by us when you enable a
+        third party application is processed under this Privacy Policy.
+        Information collected by the third party application provider is
+        governed by their privacy policies.<br />
+        <br />
+        <br />
+
+        For example:
+        <br />
+        -Firebase,
+        <a href="https://firebase.google.com/support/privacy">
+          Privacy and Security</a
+        >,<a href="https://firebase.google.com/terms"> Terms of Service</a>
+        <br />
+        -Admob,
+        <a href="https://policies.google.com/privacy"> Google Privcay Policy</a
+        >,<a href="https://www.google.com/adsense/new/localized-terms">
+          Adsense Terms of Service</a
+        >
+        <br />
+        -Tenjin,
+        <a href="https://www.tenjin.com/privacy/"> Privcay Policy</a>,<a
+          href="https://www.tenjin.com/terms/"
+        >
+          Terms of Service</a
+        >
+        <br />
+        -Meta,
+        <a href="https://developers.facebook.com/terms/">
+          Meta Platform Terms</a
+        >
+        <br />
+
+        -Applovin,
+        <a href="https://www.applovin.com/policies/"> AppLovin Policy Center</a>
+        <br />
+        -Vungle,
+        <a href="https://vungle.com/privacy/"> Privacy Policy</a>
+        <br />
+        -Mintegral,
+        <a href="https://www.mintegral.com/en/privacy/"> Privacy Policy</a>
+        <br />
+        -Bigo,
+        <a href="https://www.bigossp.com/agreement/privacyPolicy?v=v1.0.0">
+          Privacy Policy</a
+        >
+        <br />
+        -Singular,
+        <a href="https://www.singular.net/privacy-policy/"> Privacy Policy</a>
+        <br />
+      </p>
+      <p class="t3">
+        Device information that the third-party advertising SDK needs to obtain:
+        When the app starts, it will obtain external memory card read permission
+        (READ_EXTERNAL_STORAGE), write to external memory card
+        (WRITE_EXTERNAL_STORAGE), request location permission
+        (ACCESS_COARSE_LOCATION and ACCESS_FINE_LOCATION), request Bluetooth
+        state (BLUETOOTH and BLUETOOTH_ADMIN), request WIFI state
+        (ACCESS_WIFI_STATE) and related device information (such as hardware
+        model, operating system version, IMEI), and communicate with the above
+        SDKs, so that ads are displayed normally in the app. To collect app
+        usage and crash information.
+      </p>
+      <p class="t3">
+        We only promise that the data mentioned above collected and processed is
+        for the purpose of realizing the functions of the application and will
+        not involve the illegal acquisition of user privacy data. We only share
+        data with third parties within the scope of obtaining the user's consent
+        or expressly provided by law, otherwise, we will not provide
+        user-related data to any third party.
+      </p>
+
+      <p class="t2">Information Usage</p>
+      <p class="t3">
+        The main reason we use your information is to deliver and improve the
+        Software and Services. Additionally, we use your information to keep you
+        safe. Read on for a more detailed explanation of the various reasons we
+        use your information: 1 Deliver Services. Deliver the Software and
+        Services to you and maintain, improve the quality and operation of the
+        Software and Services, ensure their optimal functionality and operation.
+        2 Maintain Relationship. Identify, establish and manage your account and
+        our relationship with you. 3 Respond Requests. Provide you with customer
+        support and respond to your requests. 4 Customize Content. (i) To
+        improve and customize the Software and Services; (ii) To provide you
+        personalized content, including through the delivery of targeted
+        interest-based advertisements from us or our partners. If any new
+        purposes for processing your information arise, we will let you know
+        before we start to process information on that other purpose by
+        introducing the corresponding changes to this Privacy policy. While it
+        is not our intention to collect any personally identifiable information
+        (“PII”) (except for those set forth in this Privacy Policy), the data
+        collected may include PII. As part of our privacy measures, we implement
+        certain rules designed to avoid the unintentional collection of PII such
+        as email addresses, social security numbers, phone number, credit card
+        numbers etc. Such rules are based on known field types, parameters,
+        values and algorithms but they are not foolproof and hence the Software
+        and Services may sometimes, unintentionally, collect unwanted
+        information. We regularly examine and update these rules to avoid this
+        happened. If you located in the EEA or Ca USA, as required by law, you
+        hereby grant your consent to us to use or process your personal
+        information only for the purpose described above once you use the
+        Software or the Service. And you may withdraw your consent at any time
+        by contacting us.
+      </p>
+
+      <p class="t2">How do we use this collected information?</p>
+
+      <p class="t3">
+        1.Aggregate into user behavior reports;<br />
+        2.Process your submitted inquiries, subscriptions, and other
+        services;<br />
+        3.Manage members and their rights (such as certifying identity, managing
+        member accounts, giving member benefits, etc.);<br />
+        4.Operate and improve H-Draw (design and promote personalized
+        services of products, improve user experience, and timely discover and
+        solve technical problems of H-Draw);<br />
+        5.For network security protection (for authentication, security
+        prevention, fraud monitoring, archiving and backup purposes, to ensure
+        that we provide you with safe services);<br />
+      </p>
+
+      <p class="t2">How do we share or disclose personal information?</p>
+
+      <p class="t3">
+        1.The user's personal information is very important to us, and we will
+        not disclose the user's personal information at will unless the user's
+        consent is obtained;<br />
+        2.Sharing Information with Third Parties<br />
+        3.We will not share any PII that we have collected from you except for
+        the following events: <br />
+        4.If we are required by law to disclose your information, we may share
+        your information with law enforcement or other competent authorities and
+        any third party, as may be required (e.g., to detect, prevent or
+        otherwise address fraud, security, or technical issues; to respond to
+        claims or satisfy any legal process, subpoena, or governmental request;
+        or to protect the rights, property, or personal safety of the team’s
+        users, its partners, or the general public); In the event the team goes
+        through a business transition such as a merger or acquisition by another
+        company, consolidation, change of control, reorganization, or sale of
+        all or a portion of its assets, your information will be among the
+        assets transferred.<br />
+      </p>
+
+      <p class="t2">How do we keep information secure?</p>
+
+      <p class="t3">
+        1.We use necessary technical means and measures to ensure the security
+        of user data, and strive to prevent information leakage, loss, or
+        damage;<br />
+        2.Encryption methods are used in the transmission process of data
+        information;<br />
+        3.Check the methods of collecting, storing and processing information in
+        real-time to prevent unauthorized persons from accessing our systems;<br />
+        4.As an employee of H-Draw, we must abide by the strict
+        confidentiality obligations stipulated in the contract;<br />
+        5.All confidential data stored in your device and transmitted to our
+        cloud service is encrypted and access to the respective user is
+        restricted. Change of Control If we sell or transfer all of our products
+        or a portion of our assets to another organization, the data received
+        from or about our users may be part of the sale or transfer. The buyer
+        or assignee must comply with our commitments made in this Privacy
+        Policy;<br />
+      </p>
+
+      <p class="t2">Sharing Information with Third Parties</p>
+
+      <p class="t3">
+        We will not share any PII that we have collected from you except for the
+        following events: 1. If we are required by law to disclose your
+        information, we may share your information with law enforcement or other
+        competent authorities and any third party, as may be required (e.g., to
+        detect, prevent or otherwise address fraud, security, or technical
+        issues; to respond to claims or satisfy any legal process, subpoena, or
+        governmental request; or to protect the rights, property, or personal
+        safety of the team’s users, its partners, or the general public); 2. In
+        the event the team goes through a business transition such as a merger
+        or acquisition by another company, consolidation, change of control,
+        reorganization, or sale of all or a portion of its assets, your
+        information will be among the assets transferred.
+      </p>
+
+      <p class="t2">Data Protection</p>
+
+      <p class="t3">
+        All confidential data stored in your device and transmitted to our cloud
+        services is encrypted and has restricted access to the corresponding
+        usage. Change of Control If we sell or otherwise transfer part of the
+        whole of products or our assets to another organizations, data received
+        from or about our users may be among the items sold or transferred. The
+        buyer or transferee will have to honor the commitments we have made in
+        this Privacy Policy.
+      </p>
+      <p class="t2">SECURITY AND STORAGE OF INFORMATION</p>
+
+      <p class="t3">
+        We will try to limit the storage of your personal information to the
+        time necessary to serve the purpose(s) for which your personal
+        information was processed, to enforce our agreement, policies or terms,
+        to resolve disputes, or as otherwise required or permitted by law.
+        Please contact us if you have any questions about our retention periods.
+      </p>
+
+      <p class="t2">Children’s Policy</p>
+
+      <p class="t3">
+        We ensure that we comply with the Children's Online Privacy Protection
+        Act (COPPA), and does not knowingly collect personal information from
+        children under the age of thirteen (13). If you are in the EEA, our
+        Software and Services is not directed to children under 16, and we do
+        not knowingly collect PII from children under 16. If a parent or
+        guardian becomes aware that his or her child has provided us with
+        information without his/her consent, he or she should promptly contact
+        us and we take reasonable steps to ensure that such information is
+        deleted from our files.
+      </p>
+      <p class="t2">Delete your information or account</p>
+
+      <p class="t3">
+        You can manage your information by visiting the settings of the Products
+        you use. You may also have other privacy rights under applicable laws.
+        To exercise your rights, visit your settings for H-Draw.
+      </p>
+      <p class="t3">
+        If you delete your account, we delete your information, unless we need
+        to keep it as described in Once your account is you won’t be able to
+        reactivate it, and you won’t be able to retrieve information.
+      </p>
+      <p class="t2">Contact Us</p>
+
+      <p class="t3">
+        If you have any questions regarding this Privacy Policy, you may contact
+        us at vuxuanhao1221@gmail.com.
+      </p>
+
+      <br />
+      <br />
+      <style>
+        .t1 {
+          font-size: 50px;
+          line-height: 60px;
+          margin-top: 50px;
+          margin-bottom: 40px;
+          color: #063359;
+          font-weight: 700;
+        }
+
+        .t2 {
+          font-size: 24px;
+          margin-bottom: 20px;
+          color: #47a0af;
+          font-weight: 600;
+        }
+
+        .t3 {
+          font-size: 16px;
+          margin-bottom: 30px;
+          color: #666666;
+          font-family: 'Open Sans', sans-serif;
+        }
+        .t4 {
+          font-size: 14px;
+          margin-bottom: 30px;
+        }
+      </style>
+    </div>
+    <style type="text/css">
+      #footer-wrap {
+        margin-top: -40px;
+      }
+      #footer {
+        color: #999;
+        background: none;
+        text-align: left;
+        padding: 5px 0 2px;
+        word-spacing: 2px;
+        font-size: 12px;
+        line-height: 20px;
+        height: 20px;
+      }
+      @media (min-width: 1300px) #header, .content {
+        width: auto;
+        max-width: 1200px;
+      }
+
+      div#footer {
+        text-align: center;
+        padding: 5px 0 2px;
+        word-spacing: 2px;
+
+        font-size: 12px;
+        line-height: 20px;
+        height: 20px;
+      }
+
+      .foot-lang {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 0 2px;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+      }
+
+      .Front .lang-current {
+        background-position: 0 -64px;
+      }
+
+      .lang-current {
+        display: inline-block;
+        padding-left: 18px;
+      }
+
+      .lang-list {
+        display: none;
+        font-style: normal;
+        position: absolute;
+        width: 80px;
+        opacity: 0.9;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background: #fff;
+        left: 16px;
+        bottom: 35px;
+        padding: 8px 0;
+        text-align: left;
+      }
+
+      .lang-list a {
+        display: block;
+        color: #000 !important;
+        line-height: 27px;
+        padding-left: 15px;
+        text-decoration: none;
+      }
+    </style>
+    <style type="text/css">
+      .masonry_brick {
+        width: 500px;
+      }
+      .demo {
+        width: 1024px;
+        margin: auto;
+      }
+      .abdce {
+        margin: auto;
+        padding-top: 76px;
+        position: absolute;
+        left: 50%;
+        margin-left: -550px;
+      }
+      .height0 {
+        margin: auto;
+        overflow: hidden;
+        height: 0px;
+      }
+      .heightauto {
+        margin: auto;
+      }
+      .Content {
+        color: #333333;
+        text-align: left;
+        padding-left: 60px;
+        padding-right: 30px;
+        font-size: 12px;
+        line-height: 25px;
+        font-size: 12px;
+        font-family: 微软雅黑;
+      }
+      .JobName {
+        height: 50px;
+        line-height: 50px;
+        color: #3f3f3f;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 微软雅黑;
+        text-align: left;
+        padding-left: 60px;
+        padding-top: 30px;
+        padding-right: 30px;
+      }
+
+      @media screen and (max-width: 600px) {
+        .demo {
+          width: 100%;
+          overflow: hidden;
+        }
+        .adc {
+          width: 70px;
+        }
+        .abdce {
+          margin-left: -440px;
+        }
+        .Content {
+          padding-left: 20px;
+          width: 330px;
+        }
+        .JobName {
+          padding-left: 20px;
+        }
+      }
+    </style>
+
+    <div class="foot"></div>
+
+    <editor-card
+      style="
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: auto;
+        display: block !important;
+      "
+      ><div dir="ltr" style="all: initial">
+        <div
+          style="
+            color: initial;
+            font: initial;
+            font-feature-settings: initial;
+            font-kerning: initial;
+            font-optical-sizing: initial;
+            font-variation-settings: initial;
+            forced-color-adjust: initial;
+            text-orientation: initial;
+            text-rendering: initial;
+            -webkit-font-smoothing: initial;
+            -webkit-locale: initial;
+            -webkit-text-orientation: initial;
+            -webkit-writing-mode: initial;
+            writing-mode: initial;
+            zoom: initial;
+            place-content: initial;
+            place-items: initial;
+            place-self: initial;
+            alignment-baseline: initial;
+            animation: initial;
+            appearance: initial;
+            backdrop-filter: initial;
+            backface-visibility: initial;
+            background: initial;
+            background-blend-mode: initial;
+            baseline-shift: initial;
+            block-size: initial;
+            border-block: initial;
+            border: initial;
+            border-radius: initial;
+            border-collapse: initial;
+            border-inline: initial;
+            bottom: 0px;
+            box-shadow: initial;
+            box-sizing: initial;
+            break-after: initial;
+            break-before: initial;
+            break-inside: initial;
+            buffered-rendering: initial;
+            caption-side: initial;
+            caret-color: initial;
+            clear: initial;
+            clip: initial;
+            clip-path: initial;
+            clip-rule: initial;
+            color-interpolation: initial;
+            color-interpolation-filters: initial;
+            color-rendering: initial;
+            color-scheme: initial;
+            columns: initial;
+            column-fill: initial;
+            gap: initial;
+            column-rule: initial;
+            column-span: initial;
+            contain: initial;
+            contain-intrinsic-size: initial;
+            content: initial;
+            content-visibility: initial;
+            counter-increment: initial;
+            counter-reset: initial;
+            counter-set: initial;
+            cursor: initial;
+            cx: initial;
+            cy: initial;
+            d: initial;
+            display: flex;
+            dominant-baseline: initial;
+            empty-cells: initial;
+            fill: initial;
+            fill-opacity: initial;
+            fill-rule: initial;
+            filter: initial;
+            flex: initial;
+            flex-flow: column-reverse;
+            float: initial;
+            flood-color: initial;
+            flood-opacity: initial;
+            grid: initial;
+            grid-area: initial;
+            height: initial;
+            hyphens: initial;
+            image-orientation: initial;
+            image-rendering: initial;
+            inline-size: initial;
+            inset-block: initial;
+            inset-inline: initial;
+            isolation: initial;
+            left: initial;
+            letter-spacing: initial;
+            lighting-color: initial;
+            line-break: initial;
+            list-style: initial;
+            margin-block: initial;
+            margin: 1em;
+            margin-inline: initial;
+            marker: initial;
+            mask: initial;
+            mask-type: initial;
+            max-block-size: initial;
+            max-height: initial;
+            max-inline-size: initial;
+            max-width: initial;
+            min-block-size: initial;
+            min-height: initial;
+            min-inline-size: initial;
+            min-width: initial;
+            mix-blend-mode: initial;
+            object-fit: initial;
+            object-position: initial;
+            offset: initial;
+            opacity: initial;
+            order: initial;
+            origin-trial-test-property: initial;
+            orphans: initial;
+            outline: initial;
+            outline-offset: initial;
+            overflow-anchor: initial;
+            overflow-wrap: initial;
+            overflow: initial;
+            overscroll-behavior-block: initial;
+            overscroll-behavior-inline: initial;
+            overscroll-behavior: initial;
+            padding-block: initial;
+            padding: initial;
+            padding-inline: initial;
+            page: initial;
+            page-orientation: initial;
+            paint-order: initial;
+            perspective: initial;
+            perspective-origin: initial;
+            pointer-events: initial;
+            position: fixed;
+            quotes: initial;
+            r: initial;
+            resize: initial;
+            right: 0px;
+            ruby-position: initial;
+            rx: initial;
+            ry: initial;
+            scroll-behavior: initial;
+            scroll-margin-block: initial;
+            scroll-margin: initial;
+            scroll-margin-inline: initial;
+            scroll-padding-block: initial;
+            scroll-padding: initial;
+            scroll-padding-inline: initial;
+            scroll-snap-align: initial;
+            scroll-snap-stop: initial;
+            scroll-snap-type: initial;
+            shape-image-threshold: initial;
+            shape-margin: initial;
+            shape-outside: initial;
+            shape-rendering: initial;
+            size: initial;
+            speak: initial;
+            stop-color: initial;
+            stop-opacity: initial;
+            stroke: initial;
+            stroke-dasharray: initial;
+            stroke-dashoffset: initial;
+            stroke-linecap: initial;
+            stroke-linejoin: initial;
+            stroke-miterlimit: initial;
+            stroke-opacity: initial;
+            stroke-width: initial;
+            tab-size: initial;
+            table-layout: initial;
+            text-align: initial;
+            text-align-last: initial;
+            text-anchor: initial;
+            text-combine-upright: initial;
+            text-decoration: initial;
+            text-decoration-skip-ink: initial;
+            text-indent: initial;
+            text-overflow: initial;
+            text-shadow: initial;
+            text-size-adjust: initial;
+            text-transform: initial;
+            text-underline-offset: initial;
+            text-underline-position: initial;
+            top: initial;
+            touch-action: initial;
+            transform: initial;
+            transform-box: initial;
+            transform-origin: initial;
+            transform-style: initial;
+            transition: initial;
+            user-select: initial;
+            vector-effect: initial;
+            vertical-align: initial;
+            visibility: initial;
+            -webkit-app-region: initial;
+            border-spacing: initial;
+            -webkit-border-image: initial;
+            -webkit-box-align: initial;
+            -webkit-box-decoration-break: initial;
+            -webkit-box-direction: initial;
+            -webkit-box-flex: initial;
+            -webkit-box-ordinal-group: initial;
+            -webkit-box-orient: initial;
+            -webkit-box-pack: initial;
+            -webkit-box-reflect: initial;
+            -webkit-highlight: initial;
+            -webkit-hyphenate-character: initial;
+            -webkit-line-break: initial;
+            -webkit-line-clamp: initial;
+            -webkit-mask-box-image: initial;
+            -webkit-mask: initial;
+            -webkit-mask-composite: initial;
+            -webkit-perspective-origin-x: initial;
+            -webkit-perspective-origin-y: initial;
+            -webkit-print-color-adjust: initial;
+            -webkit-rtl-ordering: initial;
+            -webkit-ruby-position: initial;
+            -webkit-tap-highlight-color: initial;
+            -webkit-text-combine: initial;
+            -webkit-text-decorations-in-effect: initial;
+            -webkit-text-emphasis: initial;
+            -webkit-text-emphasis-position: initial;
+            -webkit-text-fill-color: initial;
+            -webkit-text-security: initial;
+            -webkit-text-stroke: initial;
+            -webkit-transform-origin-x: initial;
+            -webkit-transform-origin-y: initial;
+            -webkit-transform-origin-z: initial;
+            -webkit-user-drag: initial;
+            -webkit-user-modify: initial;
+            white-space: initial;
+            widows: initial;
+            width: initial;
+            will-change: initial;
+            word-break: initial;
+            word-spacing: initial;
+            x: initial;
+            y: initial;
+            z-index: 2147483647;
+          "
+        ></div>
+        <div
+          style="
+            color: initial;
+            font: initial;
+            font-feature-settings: initial;
+            font-kerning: initial;
+            font-optical-sizing: initial;
+            font-variation-settings: initial;
+            forced-color-adjust: initial;
+            text-orientation: initial;
+            text-rendering: initial;
+            -webkit-font-smoothing: initial;
+            -webkit-locale: initial;
+            -webkit-text-orientation: initial;
+            -webkit-writing-mode: initial;
+            writing-mode: initial;
+            zoom: initial;
+            place-content: initial;
+            place-items: initial;
+            place-self: initial;
+            alignment-baseline: initial;
+            animation: initial;
+            appearance: initial;
+            backdrop-filter: initial;
+            backface-visibility: initial;
+            background: initial;
+            background-blend-mode: initial;
+            baseline-shift: initial;
+            block-size: initial;
+            border-block: initial;
+            border: initial;
+            border-radius: initial;
+            border-collapse: initial;
+            border-inline: initial;
+            inset: initial;
+            box-shadow: initial;
+            box-sizing: initial;
+            break-after: initial;
+            break-before: initial;
+            break-inside: initial;
+            buffered-rendering: initial;
+            caption-side: initial;
+            caret-color: initial;
+            clear: initial;
+            clip: initial;
+            clip-path: initial;
+            clip-rule: initial;
+            color-interpolation: initial;
+            color-interpolation-filters: initial;
+            color-rendering: initial;
+            color-scheme: initial;
+            columns: initial;
+            column-fill: initial;
+            gap: initial;
+            column-rule: initial;
+            column-span: initial;
+            contain: initial;
+            contain-intrinsic-size: initial;
+            content: initial;
+            content-visibility: initial;
+            counter-increment: initial;
+            counter-reset: initial;
+            counter-set: initial;
+            cursor: initial;
+            cx: initial;
+            cy: initial;
+            d: initial;
+            display: initial;
+            dominant-baseline: initial;
+            empty-cells: initial;
+            fill: initial;
+            fill-opacity: initial;
+            fill-rule: initial;
+            filter: initial;
+            flex: initial;
+            flex-flow: initial;
+            float: initial;
+            flood-color: initial;
+            flood-opacity: initial;
+            grid: initial;
+            grid-area: initial;
+            height: initial;
+            hyphens: initial;
+            image-orientation: initial;
+            image-rendering: initial;
+            inline-size: initial;
+            inset-block: initial;
+            inset-inline: initial;
+            isolation: initial;
+            letter-spacing: initial;
+            lighting-color: initial;
+            line-break: initial;
+            list-style: initial;
+            margin-block: initial;
+            margin: initial;
+            margin-inline: initial;
+            marker: initial;
+            mask: initial;
+            mask-type: initial;
+            max-block-size: initial;
+            max-height: initial;
+            max-inline-size: initial;
+            max-width: initial;
+            min-block-size: initial;
+            min-height: initial;
+            min-inline-size: initial;
+            min-width: initial;
+            mix-blend-mode: initial;
+            object-fit: initial;
+            object-position: initial;
+            offset: initial;
+            opacity: initial;
+            order: initial;
+            origin-trial-test-property: initial;
+            orphans: initial;
+            outline: initial;
+            outline-offset: initial;
+            overflow-anchor: initial;
+            overflow-wrap: initial;
+            overflow: initial;
+            overscroll-behavior-block: initial;
+            overscroll-behavior-inline: initial;
+            overscroll-behavior: initial;
+            padding-block: initial;
+            padding: initial;
+            padding-inline: initial;
+            page: initial;
+            page-orientation: initial;
+            paint-order: initial;
+            perspective: initial;
+            perspective-origin: initial;
+            pointer-events: initial;
+            position: absolute;
+            quotes: initial;
+            r: initial;
+            resize: initial;
+            ruby-position: initial;
+            rx: initial;
+            ry: initial;
+            scroll-behavior: initial;
+            scroll-margin-block: initial;
+            scroll-margin: initial;
+            scroll-margin-inline: initial;
+            scroll-padding-block: initial;
+            scroll-padding: initial;
+            scroll-padding-inline: initial;
+            scroll-snap-align: initial;
+            scroll-snap-stop: initial;
+            scroll-snap-type: initial;
+            shape-image-threshold: initial;
+            shape-margin: initial;
+            shape-outside: initial;
+            shape-rendering: initial;
+            size: initial;
+            speak: initial;
+            stop-color: initial;
+            stop-opacity: initial;
+            stroke: initial;
+            stroke-dasharray: initial;
+            stroke-dashoffset: initial;
+            stroke-linecap: initial;
+            stroke-linejoin: initial;
+            stroke-miterlimit: initial;
+            stroke-opacity: initial;
+            stroke-width: initial;
+            tab-size: initial;
+            table-layout: initial;
+            text-align: initial;
+            text-align-last: initial;
+            text-anchor: initial;
+            text-combine-upright: initial;
+            text-decoration: initial;
+            text-decoration-skip-ink: initial;
+            text-indent: initial;
+            text-overflow: initial;
+            text-shadow: initial;
+            text-size-adjust: initial;
+            text-transform: initial;
+            text-underline-offset: initial;
+            text-underline-position: initial;
+            touch-action: initial;
+            transform: initial;
+            transform-box: initial;
+            transform-origin: initial;
+            transform-style: initial;
+            transition: initial;
+            user-select: initial;
+            vector-effect: initial;
+            vertical-align: initial;
+            visibility: initial;
+            -webkit-app-region: initial;
+            border-spacing: initial;
+            -webkit-border-image: initial;
+            -webkit-box-align: initial;
+            -webkit-box-decoration-break: initial;
+            -webkit-box-direction: initial;
+            -webkit-box-flex: initial;
+            -webkit-box-ordinal-group: initial;
+            -webkit-box-orient: initial;
+            -webkit-box-pack: initial;
+            -webkit-box-reflect: initial;
+            -webkit-highlight: initial;
+            -webkit-hyphenate-character: initial;
+            -webkit-line-break: initial;
+            -webkit-line-clamp: initial;
+            -webkit-mask-box-image: initial;
+            -webkit-mask: initial;
+            -webkit-mask-composite: initial;
+            -webkit-perspective-origin-x: initial;
+            -webkit-perspective-origin-y: initial;
+            -webkit-print-color-adjust: initial;
+            -webkit-rtl-ordering: initial;
+            -webkit-ruby-position: initial;
+            -webkit-tap-highlight-color: initial;
+            -webkit-text-combine: initial;
+            -webkit-text-decorations-in-effect: initial;
+            -webkit-text-emphasis: initial;
+            -webkit-text-emphasis-position: initial;
+            -webkit-text-fill-color: initial;
+            -webkit-text-security: initial;
+            -webkit-text-stroke: initial;
+            -webkit-transform-origin-x: initial;
+            -webkit-transform-origin-y: initial;
+            -webkit-transform-origin-z: initial;
+            -webkit-user-drag: initial;
+            -webkit-user-modify: initial;
+            white-space: initial;
+            widows: initial;
+            width: initial;
+            will-change: initial;
+            word-break: initial;
+            word-spacing: initial;
+            x: initial;
+            y: initial;
+            z-index: 2147483647;
+          "
+        >
+          <link
+            rel="stylesheet"
+            href="chrome-extension://hokifickgkhplphjiodbggjmoafhignh/fonts/fabric-icons.css"
+          />
+          <div style="all: initial"></div>
+        </div></div
+    ></editor-card>
+  </body>
+  <editor-card
+    style="
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: auto;
+      display: block !important;
+    "
+    ><div dir="ltr" style="all: initial">
+      <div
+        style="
+          color: initial;
+          font: initial;
+          font-feature-settings: initial;
+          font-kerning: initial;
+          font-optical-sizing: initial;
+          font-variation-settings: initial;
+          forced-color-adjust: initial;
+          text-orientation: initial;
+          text-rendering: initial;
+          -webkit-font-smoothing: initial;
+          -webkit-locale: initial;
+          -webkit-text-orientation: initial;
+          -webkit-writing-mode: initial;
+          writing-mode: initial;
+          zoom: initial;
+          place-content: initial;
+          place-items: initial;
+          place-self: initial;
+          alignment-baseline: initial;
+          animation: initial;
+          appearance: initial;
+          aspect-ratio: initial;
+          backdrop-filter: initial;
+          backface-visibility: initial;
+          background: initial;
+          background-blend-mode: initial;
+          baseline-shift: initial;
+          block-size: initial;
+          border-block: initial;
+          border: initial;
+          border-radius: initial;
+          border-collapse: initial;
+          border-end-end-radius: initial;
+          border-end-start-radius: initial;
+          border-inline: initial;
+          border-start-end-radius: initial;
+          border-start-start-radius: initial;
+          bottom: 0px;
+          box-shadow: initial;
+          box-sizing: initial;
+          break-after: initial;
+          break-before: initial;
+          break-inside: initial;
+          buffered-rendering: initial;
+          caption-side: initial;
+          caret-color: initial;
+          clear: initial;
+          clip: initial;
+          clip-path: initial;
+          clip-rule: initial;
+          color-interpolation: initial;
+          color-interpolation-filters: initial;
+          color-rendering: initial;
+          color-scheme: initial;
+          columns: initial;
+          column-fill: initial;
+          gap: initial;
+          column-rule: initial;
+          column-span: initial;
+          contain: initial;
+          contain-intrinsic-size: initial;
+          content: initial;
+          content-visibility: initial;
+          counter-increment: initial;
+          counter-reset: initial;
+          counter-set: initial;
+          cursor: initial;
+          cx: initial;
+          cy: initial;
+          d: initial;
+          display: flex;
+          dominant-baseline: initial;
+          empty-cells: initial;
+          fill: initial;
+          fill-opacity: initial;
+          fill-rule: initial;
+          filter: initial;
+          flex: initial;
+          flex-flow: column-reverse;
+          float: initial;
+          flood-color: initial;
+          flood-opacity: initial;
+          grid: initial;
+          grid-area: initial;
+          height: initial;
+          hyphens: initial;
+          image-orientation: initial;
+          image-rendering: initial;
+          inline-size: initial;
+          inset-block: initial;
+          inset-inline: initial;
+          isolation: initial;
+          left: initial;
+          letter-spacing: initial;
+          lighting-color: initial;
+          line-break: initial;
+          list-style: initial;
+          margin-block: initial;
+          margin: 1em;
+          margin-inline: initial;
+          marker: initial;
+          mask: initial;
+          mask-type: initial;
+          max-block-size: initial;
+          max-height: initial;
+          max-inline-size: initial;
+          max-width: initial;
+          min-block-size: initial;
+          min-height: initial;
+          min-inline-size: initial;
+          min-width: initial;
+          mix-blend-mode: initial;
+          object-fit: initial;
+          object-position: initial;
+          offset: initial;
+          opacity: initial;
+          order: initial;
+          origin-trial-test-property: initial;
+          orphans: initial;
+          outline: initial;
+          outline-offset: initial;
+          overflow-anchor: initial;
+          overflow-clip-margin: initial;
+          overflow-wrap: initial;
+          overflow: initial;
+          overscroll-behavior-block: initial;
+          overscroll-behavior-inline: initial;
+          overscroll-behavior: initial;
+          padding-block: initial;
+          padding: initial;
+          padding-inline: initial;
+          page: initial;
+          page-orientation: initial;
+          paint-order: initial;
+          perspective: initial;
+          perspective-origin: initial;
+          pointer-events: initial;
+          position: fixed;
+          quotes: initial;
+          r: initial;
+          resize: initial;
+          right: 0px;
+          ruby-position: initial;
+          rx: initial;
+          ry: initial;
+          scroll-behavior: initial;
+          scroll-margin-block: initial;
+          scroll-margin: initial;
+          scroll-margin-inline: initial;
+          scroll-padding-block: initial;
+          scroll-padding: initial;
+          scroll-padding-inline: initial;
+          scroll-snap-align: initial;
+          scroll-snap-stop: initial;
+          scroll-snap-type: initial;
+          shape-image-threshold: initial;
+          shape-margin: initial;
+          shape-outside: initial;
+          shape-rendering: initial;
+          size: initial;
+          speak: initial;
+          stop-color: initial;
+          stop-opacity: initial;
+          stroke: initial;
+          stroke-dasharray: initial;
+          stroke-dashoffset: initial;
+          stroke-linecap: initial;
+          stroke-linejoin: initial;
+          stroke-miterlimit: initial;
+          stroke-opacity: initial;
+          stroke-width: initial;
+          tab-size: initial;
+          table-layout: initial;
+          text-align: initial;
+          text-align-last: initial;
+          text-anchor: initial;
+          text-combine-upright: initial;
+          text-decoration: initial;
+          text-decoration-skip-ink: initial;
+          text-indent: initial;
+          text-overflow: initial;
+          text-shadow: initial;
+          text-size-adjust: initial;
+          text-transform: initial;
+          text-underline-offset: initial;
+          text-underline-position: initial;
+          top: initial;
+          touch-action: initial;
+          transform: initial;
+          transform-box: initial;
+          transform-origin: initial;
+          transform-style: initial;
+          transition: initial;
+          user-select: initial;
+          vector-effect: initial;
+          vertical-align: initial;
+          visibility: initial;
+          -webkit-app-region: initial;
+          border-spacing: initial;
+          -webkit-border-image: initial;
+          -webkit-box-align: initial;
+          -webkit-box-decoration-break: initial;
+          -webkit-box-direction: initial;
+          -webkit-box-flex: initial;
+          -webkit-box-ordinal-group: initial;
+          -webkit-box-orient: initial;
+          -webkit-box-pack: initial;
+          -webkit-box-reflect: initial;
+          -webkit-highlight: initial;
+          -webkit-hyphenate-character: initial;
+          -webkit-line-break: initial;
+          -webkit-line-clamp: initial;
+          -webkit-mask-box-image: initial;
+          -webkit-mask: initial;
+          -webkit-mask-composite: initial;
+          -webkit-perspective-origin-x: initial;
+          -webkit-perspective-origin-y: initial;
+          -webkit-print-color-adjust: initial;
+          -webkit-rtl-ordering: initial;
+          -webkit-ruby-position: initial;
+          -webkit-tap-highlight-color: initial;
+          -webkit-text-combine: initial;
+          -webkit-text-decorations-in-effect: initial;
+          -webkit-text-emphasis: initial;
+          -webkit-text-emphasis-position: initial;
+          -webkit-text-fill-color: initial;
+          -webkit-text-security: initial;
+          -webkit-text-stroke: initial;
+          -webkit-transform-origin-x: initial;
+          -webkit-transform-origin-y: initial;
+          -webkit-transform-origin-z: initial;
+          -webkit-user-drag: initial;
+          -webkit-user-modify: initial;
+          white-space: initial;
+          widows: initial;
+          width: initial;
+          will-change: initial;
+          word-break: initial;
+          word-spacing: initial;
+          x: initial;
+          y: initial;
+          z-index: 2147483647;
+        "
+      ></div>
+      <div
+        style="
+          color: initial;
+          font: initial;
+          font-feature-settings: initial;
+          font-kerning: initial;
+          font-optical-sizing: initial;
+          font-variation-settings: initial;
+          forced-color-adjust: initial;
+          text-orientation: initial;
+          text-rendering: initial;
+          -webkit-font-smoothing: initial;
+          -webkit-locale: initial;
+          -webkit-text-orientation: initial;
+          -webkit-writing-mode: initial;
+          writing-mode: initial;
+          zoom: initial;
+          place-content: initial;
+          place-items: initial;
+          place-self: initial;
+          alignment-baseline: initial;
+          animation: initial;
+          appearance: initial;
+          aspect-ratio: initial;
+          backdrop-filter: initial;
+          backface-visibility: initial;
+          background: initial;
+          background-blend-mode: initial;
+          baseline-shift: initial;
+          block-size: initial;
+          border-block: initial;
+          border: initial;
+          border-radius: initial;
+          border-collapse: initial;
+          border-end-end-radius: initial;
+          border-end-start-radius: initial;
+          border-inline: initial;
+          border-start-end-radius: initial;
+          border-start-start-radius: initial;
+          inset: initial;
+          box-shadow: initial;
+          box-sizing: initial;
+          break-after: initial;
+          break-before: initial;
+          break-inside: initial;
+          buffered-rendering: initial;
+          caption-side: initial;
+          caret-color: initial;
+          clear: initial;
+          clip: initial;
+          clip-path: initial;
+          clip-rule: initial;
+          color-interpolation: initial;
+          color-interpolation-filters: initial;
+          color-rendering: initial;
+          color-scheme: initial;
+          columns: initial;
+          column-fill: initial;
+          gap: initial;
+          column-rule: initial;
+          column-span: initial;
+          contain: initial;
+          contain-intrinsic-size: initial;
+          content: initial;
+          content-visibility: initial;
+          counter-increment: initial;
+          counter-reset: initial;
+          counter-set: initial;
+          cursor: initial;
+          cx: initial;
+          cy: initial;
+          d: initial;
+          display: initial;
+          dominant-baseline: initial;
+          empty-cells: initial;
+          fill: initial;
+          fill-opacity: initial;
+          fill-rule: initial;
+          filter: initial;
+          flex: initial;
+          flex-flow: initial;
+          float: initial;
+          flood-color: initial;
+          flood-opacity: initial;
+          grid: initial;
+          grid-area: initial;
+          height: initial;
+          hyphens: initial;
+          image-orientation: initial;
+          image-rendering: initial;
+          inline-size: initial;
+          inset-block: initial;
+          inset-inline: initial;
+          isolation: initial;
+          letter-spacing: initial;
+          lighting-color: initial;
+          line-break: initial;
+          list-style: initial;
+          margin-block: initial;
+          margin: initial;
+          margin-inline: initial;
+          marker: initial;
+          mask: initial;
+          mask-type: initial;
+          max-block-size: initial;
+          max-height: initial;
+          max-inline-size: initial;
+          max-width: initial;
+          min-block-size: initial;
+          min-height: initial;
+          min-inline-size: initial;
+          min-width: initial;
+          mix-blend-mode: initial;
+          object-fit: initial;
+          object-position: initial;
+          offset: initial;
+          opacity: initial;
+          order: initial;
+          origin-trial-test-property: initial;
+          orphans: initial;
+          outline: initial;
+          outline-offset: initial;
+          overflow-anchor: initial;
+          overflow-clip-margin: initial;
+          overflow-wrap: initial;
+          overflow: initial;
+          overscroll-behavior-block: initial;
+          overscroll-behavior-inline: initial;
+          overscroll-behavior: initial;
+          padding-block: initial;
+          padding: initial;
+          padding-inline: initial;
+          page: initial;
+          page-orientation: initial;
+          paint-order: initial;
+          perspective: initial;
+          perspective-origin: initial;
+          pointer-events: initial;
+          position: absolute;
+          quotes: initial;
+          r: initial;
+          resize: initial;
+          ruby-position: initial;
+          rx: initial;
+          ry: initial;
+          scroll-behavior: initial;
+          scroll-margin-block: initial;
+          scroll-margin: initial;
+          scroll-margin-inline: initial;
+          scroll-padding-block: initial;
+          scroll-padding: initial;
+          scroll-padding-inline: initial;
+          scroll-snap-align: initial;
+          scroll-snap-stop: initial;
+          scroll-snap-type: initial;
+          shape-image-threshold: initial;
+          shape-margin: initial;
+          shape-outside: initial;
+          shape-rendering: initial;
+          size: initial;
+          speak: initial;
+          stop-color: initial;
+          stop-opacity: initial;
+          stroke: initial;
+          stroke-dasharray: initial;
+          stroke-dashoffset: initial;
+          stroke-linecap: initial;
+          stroke-linejoin: initial;
+          stroke-miterlimit: initial;
+          stroke-opacity: initial;
+          stroke-width: initial;
+          tab-size: initial;
+          table-layout: initial;
+          text-align: initial;
+          text-align-last: initial;
+          text-anchor: initial;
+          text-combine-upright: initial;
+          text-decoration: initial;
+          text-decoration-skip-ink: initial;
+          text-indent: initial;
+          text-overflow: initial;
+          text-shadow: initial;
+          text-size-adjust: initial;
+          text-transform: initial;
+          text-underline-offset: initial;
+          text-underline-position: initial;
+          touch-action: initial;
+          transform: initial;
+          transform-box: initial;
+          transform-origin: initial;
+          transform-style: initial;
+          transition: initial;
+          user-select: initial;
+          vector-effect: initial;
+          vertical-align: initial;
+          visibility: initial;
+          -webkit-app-region: initial;
+          border-spacing: initial;
+          -webkit-border-image: initial;
+          -webkit-box-align: initial;
+          -webkit-box-decoration-break: initial;
+          -webkit-box-direction: initial;
+          -webkit-box-flex: initial;
+          -webkit-box-ordinal-group: initial;
+          -webkit-box-orient: initial;
+          -webkit-box-pack: initial;
+          -webkit-box-reflect: initial;
+          -webkit-highlight: initial;
+          -webkit-hyphenate-character: initial;
+          -webkit-line-break: initial;
+          -webkit-line-clamp: initial;
+          -webkit-mask-box-image: initial;
+          -webkit-mask: initial;
+          -webkit-mask-composite: initial;
+          -webkit-perspective-origin-x: initial;
+          -webkit-perspective-origin-y: initial;
+          -webkit-print-color-adjust: initial;
+          -webkit-rtl-ordering: initial;
+          -webkit-ruby-position: initial;
+          -webkit-tap-highlight-color: initial;
+          -webkit-text-combine: initial;
+          -webkit-text-decorations-in-effect: initial;
+          -webkit-text-emphasis: initial;
+          -webkit-text-emphasis-position: initial;
+          -webkit-text-fill-color: initial;
+          -webkit-text-security: initial;
+          -webkit-text-stroke: initial;
+          -webkit-transform-origin-x: initial;
+          -webkit-transform-origin-y: initial;
+          -webkit-transform-origin-z: initial;
+          -webkit-user-drag: initial;
+          -webkit-user-modify: initial;
+          white-space: initial;
+          widows: initial;
+          width: initial;
+          will-change: initial;
+          word-break: initial;
+          word-spacing: initial;
+          x: initial;
+          y: initial;
+          z-index: 2147483647;
+        "
+      >
+        <link
+          rel="stylesheet"
+          href="chrome-extension://hokifickgkhplphjiodbggjmoafhignh/fonts/fabric-icons.css"
+        />
+        <div style="all: initial"></div>
+      </div></div
+  ></editor-card>
+</html>
